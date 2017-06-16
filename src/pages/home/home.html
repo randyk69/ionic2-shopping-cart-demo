@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Store</ion-title>
+    <div *ngIf="total_ordered_items?.length > 0" style="position:absolute;right:32px;top:18px;background-color:#488AFF;padding:4px 8px;border-radius:50%;color:#fff;font-size:10px;">
+        {{total_ordered_items.length}}
+    </div>
+    <ion-buttons end>
+        <button  style="background-color:transparent;"><ion-icon name="basket"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+
+  <h3 style="text-align: center;">Choose an Item</h3>
+
+  <ion-card>
+    <img src="http://localhost:8100/mystore/thumbs/pasta.jpg" (click)="gotoPastaPage()" />
+    <div class="card-title" (click)="gotoPastaPage()">Pasta</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="http://localhost:8100/mystore/thumbs/pizza.jpg" (click)="gotoPizzaPage();" />
+    <div class="card-title" (click)='gotoPizzaPage()'>Pizza</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="http://localhost:8100/mystore/thumbs/starters.jpg" (click)="gotoStartersPage();" />
+    <div class="card-title" (click)="gotoStartersPage()">Starter Meals</div>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Scallop Primo",
+    "img": "scallop-primo",
+    "items": [
+      {
+        "details": "Premium seafood pizza loaded with mouth-watering baby scallops, crab kani, basil strips and parsley flakes.",
+        "price": "350"
+      }
+    ]
+  },
+  {
+    "title": "Cheesy Chicken",
+    "img": "cheesy-chicken",
+    "items": [
+      {
+        "details": "A medley of Quorn Chicken style chunks, onions, bell peppers, Cheddar cheese, and cheese sauce.",
+        "price": "275"
+      }
+    ]
+  },
+  {
+    "title": "Protein Surprise",
+    "img": "protein-surprise",
+    "items": [
+      {
+        "details": "Indulge in Quorn chicken style chunks, Quorn Pepperoni style pieces, black olives, bell peppers, onions, mushrooms, and pineapple",
+        "price": "320"
+      }
+    ]
+  },
+  {
+    "title": "Texas Chicken BBQ",
+    "img": "texas-chicken",
+    "items": [
+      {
+        "details": "Tasty chicken barbeque, red onions, rick smokey barbeque sauce, cheddar cheese, drizzled with fresh cilanto pesto, thin crust",
+        "price": "420"
+      }
+    ]
+  },
+  {
+    "title": "Belly Buster",
+    "img": "belly-buster",
+    "items": [
+      {
+        "details": "Beef, Italian sausage, pepperoni, ham, salami, cheddar cheese, salami bits, mushrooms, red and green bell pepper, onions and black olives",
+        "price": "450"
+      }
+    ]
+  }
+]

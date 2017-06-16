@@ -1,0 +1,78 @@
+import { Component } from '@angular/core';
+import { Http } from '@angular/http';
+import { HttpProvider } from '../../providers/http-provider';
+import { CartData } from '../../providers/cart-data';
+import { AlertController } from 'ionic-angular';
+
+@Component({
+  selector: 'page-checkout',
+  templateUrl: 'checkout.html',
+})
+export class Checkout {
+  public orders: any;	
+
+  constructor(private http: Http, public cart_data: CartData, public alertCtrl: AlertController) {
+
+  	this.cart_data.loadAll().then(result => {
+      this.orders = result;
+    });
+
+  }
+  
+
+  showConfirm(ndx) {
+    let confirm = this.alertCtrl.create({
+      title: 'Remove this item from Cart?',
+      cssClass: 'alertcss',
+      message: 'Please confirm.',
+      buttons: [
+        {
+          text: 'Yes',
+          handler: () => {
+            //addItem(item);
+            //console.log('Disagree clicked');
+            //this.cart_data.addItem(item);
+            //console.log(item);  
+            this.cart_data.removeItem(ndx);
+          }
+        },
+        {
+          text: 'Cancel',
+          handler: () => {
+            //console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  sendConfirm() {
+    let confirm = this.alertCtrl.create({
+      title: 'Proceed Sending your Orders?',
+      //cssClass: 'promptcss',
+      message: 'Please confirm.',
+      buttons: [
+        {
+          text: 'Yes',
+          handler: () => {
+            //addItem(item);
+            //console.log('Disagree clicked');
+            //this.cart_data.addItem(item);
+            //console.log(item);  
+            //this.cart_data.removeItem(ndx);
+          }
+        },
+        {
+          text: 'Cancel',
+          handler: () => {
+            //console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+
+}

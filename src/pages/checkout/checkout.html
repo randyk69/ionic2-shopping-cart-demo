@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Checkout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="checkout" padding>
+
+  <h4>Item(s) Ordered:</h4>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let order of orders;let i = index;">
+      <ion-item>
+          {{order.title}} <button round>P{{order.amount}}</button>
+      </ion-item>    
+      <ion-item-options>
+        <button ion-button color="danger" (click)="showConfirm(i);"><ion-icon name="trash"></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <div>
+    <p style="font-size:18px;">Total: <strong>P{{totalBill|number:0}}</strong></p>
+  </div>
+
+
+
+  <h4>Personal Info:</h4>
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="text" name="username" placeholder="Enter your name" [(ngModel)]="data.username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" name="phone" placeholder="Enter your contact number" [(ngModel)]="data.phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Select Payment Option</ion-label>
+      <ion-select name="payment" [(ngModel)]="data.payment">
+        <ion-option value="cash">Cash</ion-option>
+        <ion-option value="ccard">Credit Card</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <hr>
+
+  <button ion-button block (click)="submit()">Send My Orders</button>
+
+  {{data.response}}
+  
+
+ 
+
+</ion-content>

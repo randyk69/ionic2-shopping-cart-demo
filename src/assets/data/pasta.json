@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Tuna Mediterranean Pasta",
+    "img": "tuna-mediterranean",
+    "items": [
+      {
+        "details": "Hearty and healthy! Spaghetti tossed with chunky tuna, fresh tomatoes, and black olives.",
+        "price": "350"
+      }
+    ]
+  },
+  {
+    "title": "Carbonara Supreme",
+    "img": "carbonara-supreme",
+    "items": [
+      {
+        "details": "A rich combination of creamy white sauce with flavorful bacon, ham and button mushrooms topped with grated premium parmesan cheese.",
+        "price": "275"
+      }
+    ]
+  },
+  {
+    "title": "Classic Spaghetti",
+    "img": "classic-spaghetti",
+    "items": [
+      {
+        "details": "A hefty serving of Shakeys's classic spaghetti served with garlic bread.",
+        "price": "320"
+      }
+    ]
+  },
+  {
+    "title": "Baked Italian Sausage Fusilli",
+    "img": "baked-italian-sausage-fusilli",
+    "items": [
+      {
+        "details": "Meaty and chunky italian sausage on baked fusilli pasta with marinara sauce.",
+        "price": "420"
+      }
+    ]
+  },
+  {
+    "title": "Monster Spaghetti Meatballs",
+    "img": "monster-spaghetti-meatballs",
+    "items": [
+      {
+        "details": "Giant sized, delicious home-style meatballs, on top of premium pasta with chunky tomato meat suace.",
+        "price": "450"
+      }
+    ]
+  }
+]

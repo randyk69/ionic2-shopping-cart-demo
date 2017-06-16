@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pasta</ion-title>
+    <div *ngIf="total_ordered_items?.length > 0" style="position:absolute;right:32px;top:18px;background-color:#488AFF;padding:4px 8px;border-radius:50%;color:#fff;font-size:10px;">
+        {{total_ordered_items.length}}
+    </div>
+    <ion-buttons end>
+        <button  style="background-color:transparent;"><ion-icon name="basket"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card *ngFor="let dat of data" style="background-color:#f6f6f6;margin-bottom:25px;">
+  <img src="http://localhost:8100/mystore/images/pasta/{{ dat.img }}.jpg" />
+  <ion-card-content>
+    <ion-card-title>
+      {{ dat.title }}
+    </ion-card-title>
+    <p *ngFor="let item of dat.items;let i = index;" style="margin-bottom:30px;">
+    	{{ item.details }}<br><br><span style="font-size:15px;font-weight:bold;float:right;">P{{ item.price }}</span>
+      <button *ngIf="i==0" ion-button block (click)="showConfirm(dat.title,item.price);">Buy this Pasta</button>
+    </p>
+    
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
